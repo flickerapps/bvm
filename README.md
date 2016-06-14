@@ -5,7 +5,7 @@ Usage:
 ====
 Install:
 ```
-$ git clone
+$ git clone https://github.com/flickerapps/bvm.git
 $ cd bvm
 $ make
 ```
@@ -15,7 +15,7 @@ $ make run
 ```
 
 Example program:
-`Hello Wordl` in bvm:
+`Hello World` in bvm:
 ```c
 int hello[] = {
     ICONST, 10, /* push integer => 10 */
@@ -23,3 +23,7 @@ int hello[] = {
     HALT    /* exit the program */
 };
 ```
+
+License
+====
+[MIT](LICENSE.md)
