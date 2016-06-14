@@ -2,6 +2,7 @@ CC = gcc
 CFLAGS = -std=c99 -I include
 OBJS = \
 	src/main.o \
+	src/vm.o
 
 BIN = bin/bvm
 .SILENT:
