@@ -32,7 +32,7 @@ int main(){
 }
 ```
 
-Super Fork of: [simple-virtual-machine-c](https://github.com/primitivorm/simple-virtual-machine-C)
+Super Fork of: [simple-virtual-machine-c](https://github.com/parrt/simple-virtual-machine-C)
 License
 ====
 [MIT](LICENSE.md)
