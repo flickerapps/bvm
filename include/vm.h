@@ -8,6 +8,7 @@
 #define CALL_STACK_SIZE NUM_LOCALS << 4
 #define STACK_SIZE      CALL_STACK_SIZE << 4
 #define ARRAY_SIZE(a) ( sizeof(a) / sizeof(a[0]) )
+
 enum _vm_pcode_t {
         ERR = 0, /* we will use zero for errors */
     /* ---  Math Ops -----*/
@@ -59,10 +60,20 @@ struct _vm_t_{
 
 }; typedef struct _vm_t_ vm_t;
 
+struct _vm_instruction_t {
+
+    char cmd[8];
+    int nargs;
+
+}; typedef struct _vm_instruction_t vm_instruction_t;
+
 
 vm_t* vm_create(int*, int, int);
 void vm_init(vm_t*, int*, int, int);
 void vm_free(vm_t*);
 void vm_exec(vm_t*, int, bool);
-
+void vm_context_init(vm_context_t* ,int, int);
+void vm_print_instruction(int*, int);
+void vm_print_stack(int*, int);
+void vm_print_data(int*, int);
 #endif
